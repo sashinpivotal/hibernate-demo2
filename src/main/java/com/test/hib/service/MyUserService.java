@@ -11,11 +11,11 @@ public class MyUserService {
         UserDao userDao = new UserDaoHibernateImpl();
 
         // creat a new user
-        User user = new User("sang shin",
-                "sang@gmail.com",
+        User user = new User("tracey",
+                "tracey@gmail.com",
                 "password",
-                10,
-                100.0, "boston");
+                15,
+                200.0, "boston");
         int userId = userDao.createUser(user);
         System.out.println("returned userId = " + userId);
 
