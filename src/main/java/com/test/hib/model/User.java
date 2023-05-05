@@ -17,7 +17,9 @@ public class User {
     private double salary;
     private String city;
 
-    public User(String fullname, String email, String password, int age, double salary, String city) {
+    public User(String fullname, String email,
+                String password, int age,
+                double salary, String city) {
         this.fullname = fullname;
         this.email = email;
         this.password = password;
