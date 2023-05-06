@@ -20,5 +20,7 @@
         <mapping class="com.test.hib.model.User"/>
         <mapping class="com.perscholas.model.Teacher"/>
         <mapping class="com.perscholas.model.Department"/>
+        <mapping class="com.perscholas.model.Person"/>
+        <mapping class="com.perscholas.model.Address"/>
     </session-factory>
 </hibernate-configuration>
