@@ -5,16 +5,17 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Department implements Serializable {
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int did;
+
     private String dname;
 
-    @OneToMany(targetEntity=Teacher.class, cascade = {CascadeType.ALL})
-    private List<Teacher> teacherList;
+    @OneToMany(mappedBy = "department10", cascade = CascadeType.ALL)
+    private List<Teacher> teachers;
 
     public Department(int did, String dname) {
         super();
@@ -23,13 +24,6 @@ public class Department implements Serializable {
     }
 
     public Department() {
-    }
-
-    public List<Teacher> getTeacherList() {
-        return teacherList;
-    }
-    public void setTeacherList(List<Teacher> teacherList) {
-        this.teacherList = teacherList;
     }
 
     public int getDid() {
@@ -46,5 +40,13 @@ public class Department implements Serializable {
 
     public void setDname(String dname) {
         this.dname = dname;
+    }
+
+    public List<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(List<Teacher> teachers) {
+        this.teachers = teachers;
     }
 }
