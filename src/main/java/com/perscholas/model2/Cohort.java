@@ -18,6 +18,10 @@ public class Cohort{
 
     private String CName;
     private String duration;
+
+    @ManyToMany
+    private Set<Teacher2> teachers;
+
     public Cohort() {
     }
 
@@ -43,5 +47,13 @@ public class Cohort{
     }
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public Set<Teacher2> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(Set<Teacher2> teachers) {
+        this.teachers = teachers;
     }
 }
