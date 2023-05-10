@@ -6,19 +6,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
-@Table
 public class Person {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int PersonId;
     private String name;
     private String email;
     private int age;
+
     @OneToOne(cascade = CascadeType.ALL)
-    private Address adress;
+    private Address address;
 
     public Person(int personId, String name, String email, int age) {
         super();
@@ -31,12 +31,12 @@ public class Person {
     public Person() {
     }
 
-    public Address getAdress() {
-        return adress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(Address adress) {
-        this.adress = adress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public int getPersonId() {
