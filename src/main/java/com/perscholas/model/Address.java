@@ -20,6 +20,9 @@ public class Address implements Serializable {
     private String state;
     private int zipcode;
 
+    @OneToOne
+    private Person person;
+
     public Address() {
     }
 
@@ -68,6 +71,14 @@ public class Address implements Serializable {
 
     public void setZipcode(int zipcode) {
         this.zipcode = zipcode;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
 

@@ -37,6 +37,10 @@ public class App2 {
         p2.setName("Christ fink");
         p2.setAddress(a2);
 
+        // set person field in the address object
+        a1.setPerson(p1);
+        a2.setPerson(p2);
+
         session.save(p1);
         session.save(p2);
         session.save(a1);
