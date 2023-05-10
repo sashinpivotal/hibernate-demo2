@@ -21,5 +21,7 @@
         <mapping class="com.perscholas.model.Teacher"/>
         <mapping class="com.perscholas.model.Department"/>
         <mapping class="com.test.hib.model.Employee"/>
+        <mapping class="com.perscholas.model2.Cohort"/>
+        <mapping class="com.perscholas.model2.Teacher2"/>
     </session-factory>
 </hibernate-configuration>
