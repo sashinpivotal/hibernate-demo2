@@ -30,7 +30,7 @@ public class EmployeeDaoImpl implements IEmployeeDao{
                 Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         Transaction t = session.beginTransaction();
-        List<Employee> employees = null;
+        List<Employee> employees = session.createSQLQuery("SELECT * FROM Employee").list();
         t.commit();
         factory.close();
         session.close();
