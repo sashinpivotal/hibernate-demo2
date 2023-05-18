@@ -49,4 +49,10 @@ public class Department implements Serializable {
     public void setTeachers(List<Teacher> teachers) {
         this.teachers = teachers;
     }
+
+    public void removeTeacher(Teacher t1) {
+        System.out.println("number of teachers = " + teachers.size());
+        teachers.remove(0);
+        System.out.println("number of teachers = " + teachers.size());
+    }
 }

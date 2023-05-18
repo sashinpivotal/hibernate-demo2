@@ -61,13 +61,16 @@ public class App {
         department1.setDname("Development");
         department1.setTeachers(teachlist1);
 
-
         department2.setTeachers(teacherList2);
         department2.setDname("Marketing");
 
         //Store Department
         session.save(department1);
         session.save(department2);
+
+        department1.removeTeacher(t1);
+        session.flush();
+
         t.commit();
     }
 }
